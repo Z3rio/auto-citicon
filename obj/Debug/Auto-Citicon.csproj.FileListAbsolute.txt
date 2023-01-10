@@ -1,0 +1,11 @@
+C:\Github Projects\auto-citicon\bin\Debug\Auto-Citicon.exe.config
+C:\Github Projects\auto-citicon\bin\Debug\Auto-Citicon.exe
+C:\Github Projects\auto-citicon\bin\Debug\Auto-Citicon.pdb
+C:\Github Projects\auto-citicon\obj\Debug\Auto-Citicon.csproj.AssemblyReference.cache
+C:\Github Projects\auto-citicon\obj\Debug\Auto-Citicon.csproj.SuggestedBindingRedirects.cache
+C:\Github Projects\auto-citicon\obj\Debug\Auto_Citicon.Properties.Resources.resources
+C:\Github Projects\auto-citicon\obj\Debug\Auto-Citicon.csproj.GenerateResource.cache
+C:\Github Projects\auto-citicon\obj\Debug\Auto-Citicon.csproj.CoreCompileInputs.cache
+C:\Github Projects\auto-citicon\obj\Debug\Auto-Citicon.exe
+C:\Github Projects\auto-citicon\obj\Debug\Auto-Citicon.pdb
+C:\Github Projects\auto-citicon\obj\Debug\Auto_Citicon.Window.resources
