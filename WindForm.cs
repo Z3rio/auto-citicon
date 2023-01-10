@@ -25,7 +25,7 @@ namespace Auto_Citicon
             if (FileDialog.FileName != null && FileDialog.FileName != "" && FolderBrowser.SelectedPath != null && FolderBrowser.SelectedPath != "" && File.Exists(FileDialog.FileName) && Directory.Exists(FolderBrowser.SelectedPath))
             {
                 DirectoryInfo directory = new DirectoryInfo(FolderBrowser.SelectedPath);
-                string[] extensions = new[] { ".ydr", ".ybn" };
+                string[] extensions = new[] { ".ydr", ".ybn", ".ytd" };
                 FileInfo[] foundFiles = directory.GetFiles()
                     .Where(f => extensions.Contains(f.Extension.ToLower()))
                     .ToArray();
