@@ -35,6 +35,9 @@ namespace Auto_Citicon
             Progress.Left = 16;
 
             Label.Left = this.Width / 2 - (Label.Width / 2);
+
+            SelectYDRFolder.Left = this.Width - SelectYDRFolder.Width - 32;
+            SelectCiticon.Left = this.Width - SelectYDRFolder.Width - 32;
         }
 
         private void Window_Load(object sender, EventArgs e)
@@ -44,7 +47,22 @@ namespace Auto_Citicon
 
         private void SelectYDRFolder_Click(object sender, EventArgs e)
         {
-            
+            DialogResult result = FolderBrowser.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                YDRFolderLabel.Text = FolderBrowser.SelectedPath;
+            }
+        }
+
+        private void SelectCiticon_Click(object sender, EventArgs e)
+        {
+            DialogResult result = FileDialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                CiticonLabel.Text = FileDialog.FileName;
+            }
         }
     }
 }

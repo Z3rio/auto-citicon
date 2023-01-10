@@ -61,8 +61,8 @@
             this.Progress.Location = new System.Drawing.Point(16, 225);
             this.Progress.Name = "Progress";
             this.Progress.Size = new System.Drawing.Size(552, 50);
+            this.Progress.Step = 1;
             this.Progress.TabIndex = 1;
-            this.Progress.Value = 50;
             // 
             // Label
             // 
@@ -113,6 +113,7 @@
             this.SelectCiticon.TabIndex = 8;
             this.SelectCiticon.Text = "Select Citicon";
             this.SelectCiticon.UseVisualStyleBackColor = true;
+            this.SelectCiticon.Click += new System.EventHandler(this.SelectCiticon_Click);
             // 
             // CiticonPath
             // 
@@ -133,6 +134,11 @@
             this.CiticonLabel.Size = new System.Drawing.Size(100, 13);
             this.CiticonLabel.TabIndex = 6;
             this.CiticonLabel.Text = "Citicon not selected";
+            // 
+            // FileDialog
+            // 
+            this.FileDialog.Filter = "com files (*.com)|*.com|All files (*.*)|*.*";
+            this.FileDialog.InitialDirectory = "%localappdata%\\RedM\\RedM.app";
             // 
             // Window
             // 
