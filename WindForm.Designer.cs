@@ -157,7 +157,6 @@
             this.Name = "Window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Citicon Handler";
-            this.Load += new System.EventHandler(this.Window_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
