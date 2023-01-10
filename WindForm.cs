@@ -25,21 +25,26 @@ namespace Auto_Citicon
             if (FileDialog.FileName != null && FileDialog.FileName != "" && FolderBrowser.SelectedPath != null && FolderBrowser.SelectedPath != "" && File.Exists(FileDialog.FileName) && Directory.Exists(FolderBrowser.SelectedPath))
             {
                 DirectoryInfo directory = new DirectoryInfo(FolderBrowser.SelectedPath);
-                FileInfo[] ydrFiles = directory.GetFiles("*.ydr");
+                string[] extensions = new[] { ".ydr", ".ybn" };
+                FileInfo[] foundFiles = directory.GetFiles()
+                    .Where(f => extensions.Contains(f.Extension.ToLower()))
+                    .ToArray();
 
-                if (ydrFiles.Length > 0)
+                if (foundFiles.Length > 0)
                 {
                     FileInfo citiconFile = new FileInfo(FileDialog.FileName);
                     if (citiconFile.Name == "CitiCon.com")
                     {
                         Progress.Value = 0;
-                        Progress.Maximum = ydrFiles.Length;
+                        Progress.Maximum = foundFiles.Length;
                         Label.Text = "Converting files";
 
-                        for (int i = 0; i < ydrFiles.Length; i++)
+                        for (int i = 0; i < foundFiles.Length; i++)
                         {
-                            FileInfo file = ydrFiles[i];
+                            FileInfo file = foundFiles[i];
                             string cmdCommand = $"/C {citiconFile.FullName} formats:convert {file.FullName}";
+
+                            Console.WriteLine(file.Name);
 
                             System.Diagnostics.Process process = new System.Diagnostics.Process();
                             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
